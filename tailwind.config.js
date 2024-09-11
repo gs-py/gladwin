@@ -12,14 +12,16 @@ module.exports = {
 		container: {
 			center: true,
 			padding: "15px",
+		},
+			
 			screens: {
-			'sm': '640px',   // Small screens (default: 640px)
-			'md': '768px',   // Medium screens (default: 768px)
-			'lg': '1024px',  // Large screens (default: 1024px)
-			'xl': '1280px',  // Extra large screens (default: 1280px)
-			'2xl': '1536px', 
+			sm: '640px',   // Small screens (default: 640px)
+			md: '768px',   // Medium screens (default: 768px)
+			lg: '960px',  // Large screens (default: 1024px)
+			xl: '1280px',  // Extra large screens (default: 1280px)
 		
-			},
+		
+			
 		},
 		fontFamily: {
 			primary: "var(---font-jetbrainsMono)",
