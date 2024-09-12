@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, delay, easeInOut ,motion } from "framer-motion"
+import { AnimatePresence ,motion } from "framer-motion"
 import { usePathname } from "next/navigation"
 import Stairs from "./Stairs";
 function StairTransition() {
@@ -8,7 +8,7 @@ function StairTransition() {
     return (
         <>
         
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait" >
                 
 
                 <div key={pathname}>
@@ -20,7 +20,7 @@ function StairTransition() {
                         initial={{ opacity: 1 }}
                         animate={{
                             opacity: 0,
-                            transition:{delay: 1, duration: 0.4, ease: easeInOut},
+                            transition:{delay: 1, duration: 0.4, ease: "easeInOut"},
                         }}
                     />
 
