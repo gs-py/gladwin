@@ -11,7 +11,7 @@ import { SiTailwindcss , SiNextdotjs, SiJavascript, SiDjango } from 'react-icons
 
 const about = {
   title: "About me",
-  description: "dasdaddddad",
+  description: "I’m a Fullstack Developer and B.Tech graduate with expertise in front-end and back-end technologies. I’m passionate about building efficient, scalable web applications that solve real-world problems.",
   info: [
     {
       fieldName: "Name",
@@ -50,7 +50,7 @@ const experience = {
   description: "lore........ffsfsf",
   items: [
     {
-      company: "IITMK Research Park",
+      company: "IITMRP Research Park",
       position: "Graduate Fellow",
       duration: "2024 Jan -June"
     }
@@ -65,7 +65,7 @@ const education = {
   items: [
     {
       institution: "Government Engineering College",
-      degree: "Bachelor of Technology in Computer Science",
+      degree: "BTech in Computer Science",
       duration: "2020-2024",
     },
      {
@@ -158,8 +158,8 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full" > 
               <div className=" flex flex-col gap-[30px] text-center xl:text-left" >
                 <h3 className=" text-4xl font-bold">{experience.title}</h3>
-                <p className=" max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}
-                </p>
+                {/* <p className=" max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}
+                </p> */}
                 <ScrollArea className=" h-[400px] " >
                   <ul className=" grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
@@ -190,9 +190,9 @@ const Resume = () => {
             <TabsContent value="education" className="w-full" > 
               <div className=" flex flex-col gap-[30px] text-center xl:text-left" >
                 <h3 className=" text-4xl font-bold">{education.title}</h3>
-                <p className=" max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}
-                </p>
-                <ScrollArea className=" h-[400px] " >
+                {/* <p className=" max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description} </p>*/}
+                
+                <ScrollArea className=" h-[400px] sm:h-max " >
                   <ul className=" grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
                       return (
@@ -223,7 +223,7 @@ const Resume = () => {
               <div className=" flex flex-col gap-[30px] " >
                 <div className=" flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className=" text-4xl font-bold"> { skills.title}</h3>
-                  <p className=" max-w-[600px] text-white/60 mx-auto xl:mx-0" >{  skills.description}</p>
+                  {/* <p className=" max-w-[600px] text-white/60 mx-auto xl:mx-0" >{  skills.description}</p> */}
                 </div>
                 <ScrollArea className=" md:h-[400px]  sm:h-max" >
                   <ul className=" grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4" >
@@ -260,7 +260,7 @@ const Resume = () => {
                 <ul className=" grid  grid-cols-1 xl:grid-cols-2 gap-y-6 xl:max-w-[800px] max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <li key={index} className="flex items-center justify-center  sm:justify-between xl:justify-start gap-4">
                         <span className=" text-white/60">{item.fieldName}</span>
                         <span className=" text-white/60 hover:text-accent-defaults ">{ item.fieldValue}</span>
                       </li>

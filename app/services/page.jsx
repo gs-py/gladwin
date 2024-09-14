@@ -6,14 +6,14 @@ const services = [
   {
     num: "01",
     title: "Web Development",
-    description: "ldadfsfsfsfsfddsfsfjk dskdskm  jfksfskdfskfn ksfksfksfm ksfksfmskf kskfmskfms ksmfksfmsk",
-    href: "",
+    description: "I offer tailored web development solutions that combine responsive design and high performance to meet your business needs. From custom websites to complex e-commerce platforms and content management systems, I ensure a seamless and efficient digital experience.",
+    href: "/contact",
   },
    {
     num: "02",
-    title: "Full Stack Application",
-     description: "ldadfsfsfsfsfddsfsfjk dskdskm  jfksfskdfskfn ksfksfksfm ksfksfmskf kskfmskfms ksmfksfmsk",
-     href: "",
+    title: "UI/UX Design",
+     description: "I design intuitive and engaging user interfaces that effectively combine aesthetics with functionality. Through detailed research and usability testing, I create solutions that enhance user satisfaction and drive meaningful results.",
+     href: "/contact",
   },
    
 ]

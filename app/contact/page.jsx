@@ -1,9 +1,9 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin } from "lucide-react";
+
 import { FaPhoneAlt,FaMapMarkedAlt,FaEnvelope } from "react-icons/fa";
-import { FiMail } from "react-icons/fi";
+
 
 const info = [
   {
@@ -20,7 +20,7 @@ const info = [
   {
      icon: <FaMapMarkedAlt />,
     title:"Adress",
-    description: "Alappat H,Koottala ,Thrissur,Kerala",
+    description: "Alappat H,Thrissur,Kerala",
 
   }
 
@@ -31,7 +31,7 @@ const info = [
 import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Item } from "@radix-ui/react-select";
+
 const Contact = () => {
   return (
     <motion.section
@@ -43,13 +43,13 @@ const Contact = () => {
       className="py-0"
     >
 
-      <div className="  container mx-auto " >
+      <div className="  container mx-auto   sm:my-4 " >
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {
                   // form
           }
           <div className="order-2 xl:w-[54%] xl:order-none">
-            <form className=" flex flex-col gap-4 p-10 bg-[#27272c] rounded-xl my-0 pt-5">
+            <form className=" flex flex-col gap-4 p-10 bg-[#27272c] rounded-xl my-0 pt-5 sm:my-5">
               <h3 className=" text-4xl text-accent-defaults">Let's work together</h3>
               <p className="text-white/60">Open to new opportunities and collaborations. Let’s discuss how we can achieve great results together.</p>
               <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 ">
