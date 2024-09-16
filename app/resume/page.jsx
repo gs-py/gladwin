@@ -2,7 +2,7 @@
 
 import { FaCss3,  FaReact, FaPython, FaHtml5 } from "react-icons/fa"
 import { FiFigma } from "react-icons/fi";
-import { SiTailwindcss , SiNextdotjs, SiJavascript, SiDjango } from 'react-icons/si'
+import { SiTailwindcss , SiNextdotjs, SiDjango } from 'react-icons/si'
 
 
 
