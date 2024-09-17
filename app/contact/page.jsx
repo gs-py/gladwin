@@ -37,8 +37,6 @@ const sendEmail = (e) => {
   const customerName = formData.get("firstname") + " " + formData.get("lastname"); // Combine first and last names
   const service = formData.get("service");
   const message = formData.get("message");
-  console.log(customerName);
-  console.log(customerEmail)
 
   // Sending email to yourself with form details
   emailjs
