@@ -43,10 +43,14 @@ const sendEmail = (e) => {
   // Sending email to yourself with form details
   emailjs
     .sendForm(
-      "service_ub6ghxi",       // Your service ID
-      "template_f3ptqzb",      // Your template ID (for sending to yourself)
+      process.env.NEXT_PUBLIC_my_service_id,
+             // Your service ID
+      process.env.NEXT_PUBLIC_my_template,      // Your template ID (for sending to yourself)
       formRef.current,         // The form reference
-      "9jNLnmHf4hfXzw0bb"     // Your user ID
+      process.env.NEXT_PUBLIC_public_key,
+      {
+        from_name: customerName
+      },
     )
     .then(
       (result) => {
@@ -56,15 +60,15 @@ const sendEmail = (e) => {
         // Now send acknowledgment to the customer
         emailjs
           .send(
-            "service_ub6ghxi",       // Your service ID
-            "template_roswx9s",      // A new template for acknowledgment
+            process.env.NEXT_PUBLIC_my_service_id,       // Your service ID
+            process.env.NEXT_PUBLIC_customer_template  ,      // A new template for acknowledgment
             {
               to_email: customerEmail,  // Email of the customer
               from_name: customerName,  // Name of the customer
               service: service,          // Service requested
               message: message,          // Message content
             },
-            "9jNLnmHf4hfXzw0bb"        // Your user ID
+            process.env.NEXT_PUBLIC_public_key        // Your user ID
           )
           .then(
             (result) => {
