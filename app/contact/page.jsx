@@ -46,9 +46,7 @@ const sendEmail = (e) => {
       process.env.NEXT_PUBLIC_my_template,      // Your template ID (for sending to yourself)
       formRef.current,         // The form reference
       process.env.NEXT_PUBLIC_public_key,
-      {
-        from_name: customerName
-      },
+      
     )
     .then(
       (result) => {
