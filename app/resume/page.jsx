@@ -50,7 +50,7 @@ const experience = {
   description: "lore........ffsfsf",
   items: [
     {
-      company: "IITMRP Research Park",
+      company: "IIT Madras Research Park",
       position: "Graduate Fellow",
       duration: "2024 Jan -June"
     }
