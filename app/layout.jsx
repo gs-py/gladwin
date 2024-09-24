@@ -12,7 +12,7 @@ const JetBrainsMono = JetBrains_Mono({
 
 export const metadata = {
   title: "Gladwin",
-  description: "",
+  description: "Gladwin Santhosh - Full Stack Developer skilled in MERN, Django, and Machine Learning.",
 };
 
 export default function RootLayout({ children }) {
