@@ -52,9 +52,9 @@ const Work = () => {
   return (
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1, transition: {delay:1.8 ,duration :0.4,ease:"easeInOut" },   }} className="min-h-[80vh] flex flex-col justify-center  xl:py-0 xl:px-0 items-center">
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+        <div className="flex flex-col xl:flex-row xl:gap-[30px] overflow-hidden ">
           
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-center order-2 xl:order-none ">
+          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-betwen order-2 xl:order-none ">
                
             <div className="flex flex-col gap-[20px] h-[50%]">
               {/* Outline num */}
@@ -64,7 +64,7 @@ const Work = () => {
               {/* Project description */}
               <p className="text-white/60">{project.description}</p>
               {/* Stack */}
-              <ul className="flex gap-4">
+              <ul className="flex gap-4  flex-wrap">
                 {project.stack.map((item, index) => (
                   <li key={index} className="text-l text-accent-defaults">
                     {item.name}{index !== project.stack.length - 1 && ","}
@@ -101,20 +101,24 @@ const Work = () => {
               </div>
             </div>
           </div>
+
           <div className="w-full xl:w-[50%]">
             <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px] " onSlideChange={handleSlideChange}>
             
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className=" w-full">
                   {/* Render the project image */}
-                  <div className="h-[460px]  relative group  flex justify-center items-center ">
+                  <div className=" h-[460px]  relative group  flex justify-center items-center ">
                     {/* overlay */}
-                   <WorkSliderBtns  containerStyles=" flex gap-2  z-20 absolute right-0 xl:justtify-none xl:bottom-0 w-full justify-between xl:w-max" btnStyles=" bg-accent-defaults hover:bg-accent-hover text-primary w-[33px] h-[33px] flex justify-center items-center transition-all" />
+                   
                     {/* image */}
-                    <div className=" relative w-full h-full   ">
+                    <div className=" relative w-full h-full  ">
                        
-                      <Image src={project.image} fill className="object-contain" alt="Ia" />
+                      <Image src={project.image} className="object-contain w-full " alt="Ia"  layout="fill"   />
                       {/* <Image src={project.image}  alt="" objectPosition="center" objectFit="contain" fill/> */}
+                    </div>
+                    <div className=" ">
+                      <WorkSliderBtns  containerStyles=" flex gap-2 z-20 absolute right-0 xl:justtify-none xl:bottom-0 w-full justify-between xl:w-max " btnStyles=" bg-accent-defaults hover:bg-accent-hover text-primary w-[33px] h-[33px] flex justify-center items-center transition-all" />
                     </div>
                   </div>
                  
@@ -126,6 +130,7 @@ const Work = () => {
             </Swiper>
            
           </div>
+
         </div>
       </div>
     </motion.section>
