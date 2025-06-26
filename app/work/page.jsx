@@ -11,20 +11,25 @@ import WorkSliderBtns from "/components/WorkSliderBtns";
 
 const projects = [
   {
-    num: '01',
-    category: "SaaS Application",
-    title: "RiffWave",
-    description: "A SaaS music app offering personalized playlists, recommendations, and social sharing. Admin access includes user management, analytics, and content control for efficient app administration.",
-    stack: [{ name: "ReactJs" }, { name: "ExpressJs" }, { name: "MongoDb" }, { name: "NodeJs" }],
-    image: '/assests/work/muzi.png',
-
- // Corrected path
-    github: "https://github.com/gs-py/spoti",
-    live: "https://muzi1.netlify.app/"
-  },
+  num: '01',
+  category: "Artificial Intelligence",
+  title: "Agentic AI:  Terminal Assistant",
+  description: "Designed and implemented an autonomous terminal-based agent powered by large language models. Capable of reading/editing files, executing shell commands, and logging interactive sessions, simulating an AI coding assistant like GitHub Copilot or Cursor IDE.",
+  stack: [
+    { name: "Node.js" },
+    { name: "TypeScript" },
+    { name: "HuggingFace Inference Client" },
+    { name: "OpenAI.js Syntax" },
+    { name: "Shell" }
+  ],
+  image: '/assests/work/agentic_ai.png', // update path if needed
+  github: "https://github.com/gs-py/Agentic_AI",
+  live: "https://example.com/agentic-ai-demo" // optional live demo link
+}
+,
   {
     num: '02',
-    category: "Machine Learning ",
+     category: "Machine Learning ",
     title: "Deepfake Video Detection using ResNeXt and LSTM",
     description: "Developed a deepfake detection model leveraging ResNeXt for spatial feature extraction and LSTM for temporal sequence analysis, effectively identifying manipulated videos with high accuracy.",
    stack: [
@@ -38,6 +43,21 @@ const projects = [
     image: '/assests/work/dfd.png', // Corrected path
     github: "https://github.com/example/repo2",
     live: "https://example.com/live2"
+   
+  },
+  
+  {
+    num: '03',
+     category: "SaaS Application",
+    title: "RiffWave",
+    description: "A SaaS music app offering personalized playlists, recommendations, and social sharing. Admin access includes user management, analytics, and content control for efficient app administration.",
+    stack: [{ name: "ReactJs" }, { name: "ExpressJs" }, { name: "MongoDb" }, { name: "NodeJs" }],
+    image: '/assests/work/muzi.png',
+
+ // Corrected path
+    github: "https://github.com/gs-py/spoti",
+    live: "https://muzi1.netlify.app/"
+   
   },
 ];
 
