@@ -1,8 +1,8 @@
 "use client";
 
-import { FaCss3,  FaReact, FaPython, FaHtml5 } from "react-icons/fa"
+import { FaCss3,  FaReact, FaPython, FaHtml5, FaNodeJs } from "react-icons/fa"
 import { FiFigma } from "react-icons/fi";
-import { SiTailwindcss , SiNextdotjs, SiDjango } from 'react-icons/si'
+import { SiTailwindcss , SiNextdotjs, SiDjango, SiTypescript, SiJavascript } from 'react-icons/si'
 
 
 
@@ -53,6 +53,11 @@ const experience = {
       company: "IIT Madras Research Park",
       position: "Graduate Fellow",
       duration: "2024 Jan -June"
+    },
+    {
+      company: "Taphubs Global Private Limited",
+      position: "Full Stack Developer ",
+      duration: "2025 Jan -Present"
     }
   ]
   
@@ -97,6 +102,18 @@ const skills = {
     {
       icon: <FaHtml5 />,
       name: "HTML",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "TypeScript",
+    },
+     {
+      icon: <SiJavascript />,
+      name: "JavaScript",
+    },
+      {
+      icon: <FaNodeJs />,
+      name: "Node.js",
     },
     {
       icon: <FaReact />,
