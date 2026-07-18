@@ -1,5 +1,3 @@
-const { defaults } = require('autoprefixer');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ["class"],
@@ -41,7 +39,7 @@ module.exports = {
 				primary: '#1c1c22',
 				accent: {
 					defaults: '#00ff99',
-					hover: '#000e187',
+					hover: '#00e187',
 
 				}
 		}

@@ -15,7 +15,31 @@ const services = [
      description: "I design intuitive and engaging user interfaces that effectively combine aesthetics with functionality. Through detailed research and usability testing, I create solutions that enhance user satisfaction and drive meaningful results.",
      href: "/contact",
   },
-   
+  {
+    num: "03",
+    title: "Mobile App Development",
+    description: "I build cross-platform mobile apps with React Native — from onboarding and payments to offline-friendly flows. I ship production apps daily, covering everything from UI polish to state management and native integrations.",
+    href: "/contact",
+  },
+  {
+    num: "04",
+    title: "Backend & API Development",
+    description: "I design and build robust backends with FastAPI, Node.js, and Django — REST APIs, authentication, payments, invoicing, and third-party integrations, with the validation and error handling production traffic demands.",
+    href: "/contact",
+  },
+  {
+    num: "05",
+    title: "SEO & Performance",
+    description: "I make JavaScript-heavy sites fully readable to search engines: prerendering pipelines, sitemap architecture, redirect systems, and analytics. This work has scaled a production platform to millions of monthly search impressions.",
+    href: "/contact",
+  },
+  {
+    num: "06",
+    title: "AI & Machine Learning",
+    description: "I build ML-powered features and LLM-based tools — from deep learning models like deepfake detection with ResNeXt and LSTM to agentic AI assistants that read files, run commands, and automate real workflows.",
+    href: "/contact",
+  },
+
 ]
 
 import { motion } from 'framer-motion';
@@ -31,7 +55,7 @@ const Services= () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: {delay: 2.4 , duration: 0.4, ease: "easeIn"},
+            transition: {delay: 1 , duration: 0.4, ease: "easeIn"},
           }}
           className=' grid  grid-cols-1 md:grid-cols-2 gap-[60px] justify-center '
         >

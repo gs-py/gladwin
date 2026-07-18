@@ -1,5 +1,8 @@
-"use client";
-import { motion } from "framer-motion";
+export const metadata = {
+  title: "Case Studies & Blog | Gladwin Santhosh",
+  description:
+    "Engineering case studies from production work: scaling organic search to 15M impressions, shipping across 5 codebases, and building booking flows end-to-end.",
+};
 
 const posts = [
   {
@@ -96,14 +99,10 @@ const posts = [
 
 const Blog = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }}
-      className="min-h-[80vh] py-12 xl:py-8"
-    >
+    <section className="min-h-[80vh] py-12 xl:py-8">
       <div className="container mx-auto flex flex-col gap-12 max-w-[860px]">
         <div className="text-center xl:text-left">
-          <h2 className="text-4xl font-bold">Case Studies</h2>
+          <h1 className="text-4xl font-bold">Case Studies</h1>
           <p className="text-white/60 mt-3">
             Engineering write-ups from real production work — problems, decisions, and measured outcomes.
           </p>
@@ -137,7 +136,7 @@ const Blog = () => {
           </article>
         ))}
       </div>
-    </motion.section>
+    </section>
   );
 };
 

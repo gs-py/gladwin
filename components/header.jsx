@@ -7,8 +7,8 @@ const Header = () => {
         <header className="py-8 xl:py-12 text-white">
             <div className="container mx-auto flex justify-between items-center ">
                 <Link href="/">
-                    <h1 className="text-4xl font-semibold">Gladwin<span className="text-accent-defaults">.</span>
-                    </h1>
+                    <p className="text-4xl font-semibold">Gladwin<span className="text-accent-defaults">.</span>
+                    </p>
                 </Link>
                 {/* { Dsktop naac and hire me button} */}
                 <div className="hidden xl:flex items-center gap-8 ">

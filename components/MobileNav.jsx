@@ -44,8 +44,8 @@ const MobileNav = () => {
           <SheetContent className=" flex flex-col   h-fit  min-w-15  bg-transparent backdrop-blur-sm border border-gray-600 mt-2 mr-2   rounded-2xl">
               <div className=" my-auto flex flex-col text-center text-2xl ">
                   <Link href={"/"}>
-                      <h1 className=" text-xl font-semibold ">Gladwin<span className=" text-accent-defaults">.</span>
-                      </h1></Link>
+                      <p className=" text-xl font-semibold ">Gladwin<span className=" text-accent-defaults">.</span>
+                      </p></Link>
               </div>
               <nav className=" flex  flex-col justify-center items-center gap-8 my-auto">
                    {links.map((link, index) => {

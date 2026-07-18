@@ -11,10 +11,7 @@ const JetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ??
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
-  ),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://gladwin-liart.vercel.app"),
   title: "Gladwin Santhosh | Full Stack Developer",
   description: "Gladwin Santhosh - Full Stack Developer at LyfSkills, skilled in React, Next.js, Node.js, FastAPI, and Machine Learning.",
   openGraph: {

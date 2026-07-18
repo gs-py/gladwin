@@ -63,7 +63,7 @@ const Work = () => {
   };
 
   return (
-    <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1, transition: {delay:1.8 ,duration :0.4,ease:"easeInOut" },   }} className="min-h-[80vh] flex flex-col justify-center  xl:py-0 xl:px-0 items-center">
+    <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1, transition: {delay: 1 ,duration :0.4,ease:"easeInOut" },   }} className="min-h-[80vh] flex flex-col justify-center  xl:py-0 xl:px-0 items-center">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px] overflow-hidden ">
           

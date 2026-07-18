@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { FaPhoneAlt, FaMapMarkedAlt, FaEnvelope } from "react-icons/fa";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
@@ -28,9 +28,12 @@ const info = [
 
 const Contact = () => {
   const formRef = useRef(null);
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
 
 const sendEmail = (e) => {
   e.preventDefault(); // Prevent default form submission
+  if (status === "sending") return;
+  setStatus("sending");
 
   const formData = new FormData(formRef.current);
   const customerEmail = formData.get("email");
@@ -51,7 +54,8 @@ const sendEmail = (e) => {
     .then(
       (result) => {
         console.log(result.text);
-        alert("Message sent successfully!");
+        setStatus("sent");
+        formRef.current?.reset();
 
         // Now send acknowledgment to the customer
         emailjs
@@ -77,11 +81,9 @@ const sendEmail = (e) => {
       },
       (error) => {
         console.log(error.text);
-        alert("Failed to send message!");
+        setStatus("error");
       }
     );
-
-  e.target.reset(); // Reset form fields after submission
 };
 
 
@@ -90,7 +92,7 @@ const sendEmail = (e) => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 1, duration: 0.4, ease: "easeIn" },
       }}
       className="py-0"
     >
@@ -127,7 +129,15 @@ const sendEmail = (e) => {
                 </SelectContent>
               </Select>
               <Textarea name="message" className="h-28" placeholder="Type your Message here." />
-              <Button type="submit" size="md" className="max-w-40">Send Message</Button>
+              <Button type="submit" size="md" className="max-w-40" disabled={status === "sending"}>
+                {status === "sending" ? "Sending..." : "Send Message"}
+              </Button>
+              {status === "sent" && (
+                <p className="text-accent-defaults text-sm" role="status">Message sent — I&apos;ll get back to you soon.</p>
+              )}
+              {status === "error" && (
+                <p className="text-red-400 text-sm" role="status">Failed to send. Email me directly at gladwinsanthosh6@gmail.com.</p>
+              )}
             </form>
           </div>
           {/* Info */}
