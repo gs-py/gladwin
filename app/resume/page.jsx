@@ -11,7 +11,7 @@ import { SiTailwindcss , SiNextdotjs, SiDjango, SiTypescript, SiJavascript } fro
 
 const about = {
   title: "About me",
-  description: "I’m a Fullstack Developer and B.Tech graduate with expertise in front-end and back-end technologies. I’m passionate about building efficient, scalable web applications that solve real-world problems.",
+  description: "I’m a Full Stack Developer currently building EdTech products at LyfSkills, with expertise across front-end, back-end, and machine learning. I’m passionate about building efficient, scalable web applications that solve real-world problems.",
   info: [
     {
       fieldName: "Name",
@@ -46,27 +46,39 @@ const about = {
 
 const experience = {
   icon: '/assets/resume/badge.svg',
-  title: " My Experience",
-  description: "lore........ffsfsf",
+  title: "My Experience",
+  description: "My professional journey building full-stack products, from research fellowships to production EdTech platforms.",
   items: [
     {
-      company: "IIT Madras Research Park",
-      position: "Graduate Fellow",
-      duration: "2024 Jan -June"
+      company: "LyfSkills",
+      position: "Full Stack Developer",
+      duration: "Nov 2025 - Present",
+      highlights: [
+        "Ship features across 5 production codebases: admin dashboard, consumer web app, parent portal, React Native partner app, and FastAPI backend",
+        "Built end-to-end booking and renewal flows: trial booking with OTP, plan renewals, invoicing, and payment settlement UI",
+        "Led full UI revamps of the admin dashboard and parent portal with mobile-first design",
+        "Shipped Google OAuth, multi-currency and timezone-aware experiences for international users",
+        "Built SEO infrastructure (prerendering, sitemaps, 301 redirect system) that scaled organic search from near-zero to 15M impressions and 79.7K clicks in 3 months, including Google Discover traffic"
+      ]
     },
     {
       company: "Taphubs Global Private Limited",
-      position: "Full Stack Developer ",
-      duration: "2025 Jan -Present"
+      position: "Full Stack Developer",
+      duration: "Jan 2025 - Nov 2025"
+    },
+    {
+      company: "IIT Madras Research Park",
+      position: "Graduate Fellow",
+      duration: "Jan 2024 - Jun 2024"
     }
   ]
-  
+
 }
 
 const education = {
   icon: '/assets/resume/cap.svg',
-  title: " My Education",
-  description: "lore........ffsfsf",
+  title: "My Education",
+  description: "My academic background and professional certifications.",
   items: [
     {
       institution: "Government Engineering College",
@@ -79,13 +91,13 @@ const education = {
       duration: "2024",
     },
     {
-      institution: "Couresera",
+      institution: "Coursera",
       degree: "Advanced React",
       duration: "2024",
     },
-   
+
   ]
-  
+
 }
 
 
@@ -93,7 +105,7 @@ const education = {
 
 const skills = {
   title: "My Skills",
-  description: "fsdfsdfsdfffdgdggdgd",
+  description: "Technologies I work with daily to build full-stack applications.",
   skillList: [
     {
       icon: <FaCss3 />,
@@ -182,17 +194,26 @@ const Resume = () => {
                     {experience.items.map((item, index) => {
                       return (
                         <li key={index}
-                        className=" bg-[#232329] h-[184px] py-6 px-10  rounded-xl flex flex-col  justify-center items-center lg:items-start gap-1" 
+                        className={` bg-[#232329] min-h-[184px] py-6 px-10  rounded-xl flex flex-col  justify-center items-center lg:items-start gap-1 ${item.highlights ? "lg:col-span-2" : ""}`}
                         >
                           <span className=" text-accent-defaults">{ item.duration}</span>
                           <h3 className=" text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
                           <div className=" flex items-center gap-3">
                             <span className=" w-[6px] h-[6px] rounded-full bg-accent-defaults"></span>
                             <p className=" text-white/60">
-                            {item.company} 
+                            {item.company}
                             </p  >
                           </div>
-
+                          {item.highlights && (
+                            <ul className=" mt-3 flex flex-col gap-2 text-left">
+                              {item.highlights.map((point, i) => (
+                                <li key={i} className=" text-white/60 text-sm flex gap-3 items-start">
+                                  <span className=" w-[6px] h-[6px] mt-[6px] shrink-0 rounded-full bg-accent-defaults"></span>
+                                  {point}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </li>
                       )
                     })}

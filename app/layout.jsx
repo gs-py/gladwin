@@ -11,8 +11,18 @@ const JetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Gladwin",
-  description: "Gladwin Santhosh - Full Stack Developer skilled in MERN, Django, and Machine Learning.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
+  ),
+  title: "Gladwin Santhosh | Full Stack Developer",
+  description: "Gladwin Santhosh - Full Stack Developer at LyfSkills, skilled in React, Next.js, Node.js, FastAPI, and Machine Learning.",
+  openGraph: {
+    title: "Gladwin Santhosh | Full Stack Developer",
+    description: "Full Stack Developer at LyfSkills, skilled in React, Next.js, Node.js, FastAPI, and Machine Learning.",
+    type: "website",
+    images: ["/assets/img1.png"],
+  },
 };
 
 export default function RootLayout({ children }) {

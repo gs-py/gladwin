@@ -11,53 +11,46 @@ import WorkSliderBtns from "/components/WorkSliderBtns";
 
 const projects = [
   {
-  num: '01',
-  category: "Artificial Intelligence",
-  title: "Agentic AI:  Terminal Assistant",
-  description: "Designed and implemented an autonomous terminal-based agent powered by large language models. Capable of reading/editing files, executing shell commands, and logging interactive sessions, simulating an AI coding assistant like GitHub Copilot or Cursor IDE.",
-  stack: [
-    { name: "Node.js" },
-    { name: "TypeScript" },
-    { name: "HuggingFace Inference Client" },
-    { name: "OpenAI.js Syntax" },
-    { name: "Shell" }
-  ],
-  image: '/assests/work/agentic_ai.png', // update path if needed
-  github: "https://github.com/gs-py/Agentic_AI",
-  live: "https://example.com/agentic-ai-demo" // optional live demo link
-}
-,
+    num: '01',
+    category: "Artificial Intelligence",
+    title: "Agentic AI: Terminal Assistant",
+    description: "Designed and implemented an autonomous terminal-based agent powered by large language models. Capable of reading/editing files, executing shell commands, and logging interactive sessions, simulating an AI coding assistant like GitHub Copilot or Cursor IDE.",
+    stack: [
+      { name: "Node.js" },
+      { name: "TypeScript" },
+      { name: "HuggingFace Inference Client" },
+      { name: "OpenAI.js Syntax" },
+      { name: "Shell" }
+    ],
+    image: '/assets/work/agentic_ai.png',
+    github: "https://github.com/gs-py/Agentic_AI",
+    live: null
+  },
   {
     num: '02',
-     category: "Machine Learning ",
+    category: "Machine Learning",
     title: "Deepfake Video Detection using ResNeXt and LSTM",
     description: "Developed a deepfake detection model leveraging ResNeXt for spatial feature extraction and LSTM for temporal sequence analysis, effectively identifying manipulated videos with high accuracy.",
-   stack: [
-  { name: "Python" },
-  { name: "Flask" },
-  { name: "ResNeXt" },
-  { name: "LSTM" },
-  { name: "TensorFlow/PyTorch" }
-]
-,
-    image: '/assests/work/dfd.png', // Corrected path
-    github: "https://github.com/example/repo2",
-    live: "https://example.com/live2"
-   
+    stack: [
+      { name: "Python" },
+      { name: "Flask" },
+      { name: "ResNeXt" },
+      { name: "LSTM" },
+      { name: "TensorFlow/PyTorch" }
+    ],
+    image: '/assets/work/dfd.png',
+    github: "https://github.com/gs-py/DeepSecure",
+    live: null
   },
-  
   {
     num: '03',
-     category: "SaaS Application",
+    category: "SaaS Application",
     title: "RiffWave",
     description: "A SaaS music app offering personalized playlists, recommendations, and social sharing. Admin access includes user management, analytics, and content control for efficient app administration.",
     stack: [{ name: "ReactJs" }, { name: "ExpressJs" }, { name: "MongoDb" }, { name: "NodeJs" }],
-    image: '/assests/work/muzi.png',
-
- // Corrected path
+    image: '/assets/work/muzi.png',
     github: "https://github.com/gs-py/spoti",
     live: "https://muzi1.netlify.app/"
-   
   },
 ];
 
@@ -94,19 +87,21 @@ const Work = () => {
               <div className="border border-white/20"></div>
               {/* Buttons */}
               <div className="flex items-center gap-4">
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full justify-center items-center flex bg-white/5 group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent-defaults" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live Project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-                <Link href={project.github}>
+                {project.live && (
+                  <Link href={project.live} target="_blank" rel="noopener noreferrer">
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full justify-center items-center flex bg-white/5 group">
+                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent-defaults" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Live Project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
+                <Link href={project.github} target="_blank" rel="noopener noreferrer">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full justify-center items-center flex bg-white/5 group">
@@ -134,11 +129,10 @@ const Work = () => {
                     {/* image */}
                     <div className=" relative w-full h-full  ">
                        
-                      <Image src={project.image} className="object-contain w-full " alt="Ia"  layout="fill"   />
-                      {/* <Image src={project.image}  alt="" objectPosition="center" objectFit="contain" fill/> */}
+                      <Image src={project.image} className="object-contain w-full " alt={project.title} fill />
                     </div>
                     <div className=" ">
-                      <WorkSliderBtns  containerStyles=" flex gap-2 z-20 absolute right-0 xl:justtify-none xl:bottom-0 w-full justify-between xl:w-max " btnStyles=" bg-accent-defaults hover:bg-accent-hover text-primary w-[33px] h-[33px] flex justify-center items-center transition-all" />
+                      <WorkSliderBtns  containerStyles=" flex gap-2 z-20 absolute right-0 xl:bottom-0 w-full justify-between xl:w-max " btnStyles=" bg-accent-defaults hover:bg-accent-hover text-primary w-[33px] h-[33px] flex justify-center items-center transition-all" />
                     </div>
                   </div>
                  

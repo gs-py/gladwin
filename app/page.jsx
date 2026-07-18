@@ -16,7 +16,7 @@ const Home = () => {
         <div className=" text-center xl:text-left order-2 xl:order-none ">
           <span className=" text-xl">Software Developer</span>
           <h1 className=" h1 ">Hello I'm <br /><span className=" text-accent-defaults ">Gladwin Santhosh</span></h1>
-          <p className=" max-w-[500px] mb-9 text-white/80">I excel at developing ML models and building full-stack applications, with a passion for solving complex problems and continuously improving my skills in machine learning and development.</p>
+          <p className=" max-w-[500px] mb-9 text-white/80">Full Stack Developer at LyfSkills, building production EdTech platforms with React, Next.js, Node.js, and FastAPI. I also develop ML models, with a passion for solving complex problems and continuously improving my craft.</p>
         
           <div className=" flex flex-col xl:flex-row items-center gap-8">
             <a href="https://drive.google.com/file/d/12hTVKsL6ryuwwvCyVzUCI8MEFHXvXK7r/view?usp=drive_link" download target="_blank" rel="noopener noreferrer"><Button variant="outline"

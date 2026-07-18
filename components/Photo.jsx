@@ -18,7 +18,7 @@ const Photo = () => {
               opacity: 1,
               transition: {delay: 2, duration: 0.4, ease: "easeIn"},
           }}  className=" w-[298px] h-[298px] xl:w-[398px]  xl:h-[398px]  mix-blend-lighten  absolute">
-                  <Image src="/assests/img1.png" priority quality={100} fill alt="" className="object-contain"  />
+                  <Image src="/assets/img1.png" priority quality={100} fill alt="Gladwin Santhosh" className="object-contain"  />
               </motion.div>
               {/* circles */}
               <motion.svg
