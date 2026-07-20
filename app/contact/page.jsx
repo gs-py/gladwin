@@ -17,7 +17,7 @@ const info = [
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "gladwinsanthosh6@gmail.com",
+    description: "info@gladwinsanthosh.dpdns.org",
   },
   {
     icon: <FaMapMarkedAlt />,
@@ -136,7 +136,7 @@ const sendEmail = (e) => {
                 <p className="text-accent-defaults text-sm" role="status">Message sent — I&apos;ll get back to you soon.</p>
               )}
               {status === "error" && (
-                <p className="text-red-400 text-sm" role="status">Failed to send. Email me directly at gladwinsanthosh6@gmail.com.</p>
+                <p className="text-red-400 text-sm" role="status">Failed to send. Email me directly at info@gladwinsanthosh.dpdns.org.</p>
               )}
             </form>
           </div>

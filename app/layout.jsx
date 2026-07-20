@@ -11,7 +11,7 @@ const JetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://gladwin-liart.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://gladwinsanthosh.dpdns.org"),
   title: "Gladwin Santhosh | Full Stack Developer",
   description: "Gladwin Santhosh - Full Stack Developer at LyfSkills, skilled in React, Next.js, Node.js, FastAPI, and Machine Learning.",
   openGraph: {

@@ -27,7 +27,7 @@ const about = {
     },
        {
       fieldName: "Email",
-      fieldValue: "gladwinsanthosh6@gmail.com",
+      fieldValue: "info@gladwinsanthosh.dpdns.org",
     },
     {
       fieldName: "Freelance",
